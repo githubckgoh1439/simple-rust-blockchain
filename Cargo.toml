@@ -1,0 +1,22 @@
+[package]
+name = "simpleblockchain"
+version = "0.1.0"
+authors = ["gohck <ck.goh1439@gmail.com>"]
+
+[lib]
+name = "simpleblockchain"
+path = "src/lib.rs"
+
+[[bin]]
+name = "simpleblockchain"
+path = "src/main.rs"
+
+[dependencies]
+time = "*"
+sha2 = "*"
+serde = "*"
+serde_derive = "*"
+serde_json = "*"
+serde_cbor = "0.10"
+primitive-types = { version= "0.7.2", features = ["serde"] } 
+blake3 = "0.3.6"
