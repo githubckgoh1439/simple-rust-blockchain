@@ -1,0 +1,9 @@
+# refer project structure components of [main, core, utils]: https://www.github.com/dollarkillerx/Simple-blockchain/tree/master/ 
+
+[workspace]
+members = [
+	"main",
+	"core",
+	"utils",
+	
+]

@@ -1,0 +1,21 @@
+[package]
+name = "core"
+version = "0.1.0"
+authors = ["gohck <gohck@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# chrono = "0.4.11"
+utils = {path="../utils"}
+# serde = { version = "1.0.110", features = ["derive"] }     # 基础编码器  ()
+serde = "*"
+serde_derive = "*"
+serde_json = "*"
+serde_cbor = "0.10"
+crypto-hash = "0.3.3"
+primitive-types = { version= "0.7.2", features = ["serde"] } 
+blake3 = "0.3.6"
+ed25519-dalek = "1.0.0"
+rand = "0.7.3"
