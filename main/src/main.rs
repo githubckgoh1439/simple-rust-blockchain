@@ -38,8 +38,10 @@ fn main() {
                 println!("exiting!");
                 process::exit(0);
             },
-            1 =>
+            1 =>            
             {
+                //3.1 created a new transaction object
+                //3.2 added this transaction object into Block object 
                 let mut amount = String::from("155");
                 chain.new_transaction(String::from("coni-blake3"), String::from("ceni-blake3"), amount.trim().parse().unwrap(), String::from("signature"));
                 println!("transaction added : 1st");
@@ -59,6 +61,10 @@ fn main() {
             },
             2 =>
             {
+                //4. added this Block object into the CHAIN list
+                //4.1 set Block-hash using method of 'crypto_hash::Algorithm::SHA256'
+                //4.2 mining the block
+                //4.3 added this mined-block into the CHAIN list
                 chain.generate_new_block();    
                 println!("block generated successfully");    
             },

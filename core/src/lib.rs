@@ -1,9 +1,7 @@
 
 extern crate serde_derive;
-extern crate serde_cbor;
 extern crate rand;
 extern crate ed25519_dalek;
-extern crate blake3;
 
 pub mod blockchain;
 pub mod block;
@@ -25,5 +23,4 @@ pub type Signatures = String;
 //     }
 // }
 
-//=====================================================
 

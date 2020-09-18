@@ -40,16 +40,20 @@ impl Blockheader {
         self.nonce = index;
     }
 
+    /// Set hash of current block
     pub fn set_merkle_root_hash(&mut self, mk: H256 ){
         self.merkle_root_hash = mk;
     }
 
-    //goh-20200911@1816
+    /// Set hash of previous block as pre hash
+    pub fn set_pre_hash(&mut self, pre: H256) {
+        self.pre_hash = pre;
+    }
+
     pub fn get_pre_hash(&self) -> &H256 {
         return &self.pre_hash;
     }
 
-    //goh-20200911@1821
     pub fn get_merkle_root_hash(&self) -> &H256 {
         return &self.merkle_root_hash;
     }

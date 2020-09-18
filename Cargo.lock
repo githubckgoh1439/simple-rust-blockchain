@@ -128,13 +128,11 @@ checksum = "245097e9a4535ee1e3e3931fcfcd55a796a44c643e8596ff6566d68f09b87bbc"
 name = "core"
 version = "0.1.0"
 dependencies = [
- "blake3",
  "crypto-hash",
  "ed25519-dalek",
  "primitive-types",
  "rand",
  "serde",
- "serde_cbor",
  "serde_derive",
  "serde_json",
  "utils",
@@ -742,6 +740,13 @@ checksum = "f7fe0bb3479651439c9112f72b6c505038574c9fbb575ed1bf3b797fa39dd564"
 name = "utils"
 version = "0.1.0"
 dependencies = [
+ "blake3",
+ "primitive-types",
+ "rand",
+ "serde",
+ "serde_cbor",
+ "serde_derive",
+ "serde_json",
  "time",
 ]
 
