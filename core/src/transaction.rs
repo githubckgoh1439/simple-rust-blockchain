@@ -7,10 +7,11 @@ use crate::Signatures;
 /// Represents a transaction
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Transaction {
+    //nonce: u32,                     // Transaction's Nonce : prevent tx-replay purpose   
     sender: Address,
     recipient: Address,
     amount: u64,
-    signature: Signatures,          // signer's signed signature
+    signature: Signatures,          // signer's signed signature (by keypairs that assigned)
 
 }
 
@@ -33,7 +34,6 @@ impl Transaction {
         return true;
     }
 
-
     // pub fn get_sender (&self) -> &Option<PublicKey> {
     //     return &self.sender;
     // }
@@ -43,6 +43,4 @@ impl Transaction {
     // }
 
 }
-
-
 
