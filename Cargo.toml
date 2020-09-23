@@ -5,5 +5,5 @@ members = [
 	"main",
 	"core",
 	"utils",
-	
+	"sample",
 ]
