@@ -6,4 +6,6 @@ members = [
 	"core",
 	"utils",
 	"sample",
+	"utils/hashing-utils",
+	"sample02",
 ]
