@@ -9,4 +9,5 @@ members = [
 	"utils/hashing-utils",
 	"sample02",
 	"sample03",
+	"tests",
 ]
