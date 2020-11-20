@@ -284,20 +284,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d36fab90f82edc3c747f9d438e06cf0a491055896f2a279638bb5beed6c40177"
 
 [[package]]
-name = "hash888"
-version = "0.1.0"
-dependencies = [
- "blake3",
- "primitive-types",
- "rand",
- "serde",
- "serde_cbor",
- "serde_derive",
- "serde_json",
- "time",
-]
-
-[[package]]
 name = "hex"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -561,12 +547,12 @@ name = "sample03"
 version = "0.1.0"
 dependencies = [
  "blake3",
- "hash888",
  "primitive-types",
  "serde",
  "serde_cbor",
  "serde_derive",
  "serde_json",
+ "utils",
 ]
 
 [[package]]

@@ -4,7 +4,8 @@ use primitive_types::{H256};
 
 use std::error::Error;
 use std::fs::File;
-use hash888::coder03::{hashing};
+use utils::hash::blake3_hash;
+
 
 //20200929
 /// Represents a Person02 Object
@@ -55,7 +56,7 @@ impl Person03 {
     // https://www.tutorialspoint.com/rust/rust_error_handling.htm
     pub fn use_blake3hash(&mut self)-> Result<bool, Box<dyn Error>>{
     
-        let blake3_encode = hashing(self);
+        let blake3_encode = blake3_hash(self);
         println!("[use_blake3hash() : encode] --------- {:?}", &blake3_encode);
     
         //=====================================1. Write to File & Read File

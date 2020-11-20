@@ -13,4 +13,4 @@ serde_json = "*"
 serde_cbor = "0.10"
 primitive-types = { version= "0.7.2", features = ["serde"] } 
 blake3 = "0.3.6"
-hash888 = { version = "0.1.0", optional = false, path = "../utils/hashing-utils-03" }
+utils = {path = "../utils"}

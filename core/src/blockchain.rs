@@ -1,6 +1,7 @@
 
 use primitive_types::{H256};
-use utils::coder;
+// use utils::hash::blake3_hash;
+use utils::systime::now;
 
 use crate::block::Block;
 use crate::transaction::Transaction;
@@ -61,7 +62,7 @@ impl Chain {
         // compile : genesis-block for above genesis-transaction 
         let block_no = 0;
         let nonce = 0;
-        let timestamp = coder::now();
+        let timestamp = now();
         let pre_hash = H256([0; 32]);
         let difficulty = String::from("1").trim().parse::<u32>().expect("need INT");
 
@@ -101,7 +102,7 @@ impl Chain {
         // compile : non-genesis-block for current non-genesis-transaction
         let block_no = 0; 
         let nonce = 0;
-        let timestamp = coder::now();
+        let timestamp = now();
         let pre_hash = H256([0; 32]);
         let difficulty = self.difficulty;
 

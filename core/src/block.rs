@@ -4,7 +4,8 @@ use primitive_types::{H256};
 
 use crate::blockheader::Blockheader;
 use crate::transaction::Transaction;
-use utils::coder;
+use utils::hash::blake3_hash;
+
 
 /// Represents a Block
 #[derive(Serialize, Deserialize, Debug, Clone)]
@@ -53,7 +54,7 @@ impl Block {
 
     // return the Hash-value of current-block & set to 'merkle_root_hash'
     pub fn get_current_hash(&mut self, header: &mut Blockheader) -> H256{
-        let hash = coder::blake3_hash(header);
+        let hash = blake3_hash(header);
         return hash;
 
     }

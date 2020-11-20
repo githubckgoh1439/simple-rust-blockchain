@@ -4,7 +4,7 @@ use primitive_types::{H256};
 
 use std::error::Error;
 use std::fs::File;
-use utils::coder;
+use utils::hash::blake3_hash;
 
 
 /// Represents a Person Object
@@ -59,7 +59,7 @@ impl Person {
     pub fn use_blake3hash(&mut self)-> Result<bool, Box<dyn Error>>{
     //   pub fn use_blake3hash(&mut self) -> Result<bool, String>{
     
-        let blake3_encode = coder::blake3_hash(self);
+        let blake3_encode = blake3_hash(self);
         println!("[use_blake3hash() : encode] --------- {:?}", &blake3_encode);
     
         //=====================================1. Write to File & Read File
