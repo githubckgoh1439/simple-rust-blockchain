@@ -1,5 +1,3 @@
 
-### Modular basis
+# A simple blockchain written in RUST lang, in Modular basis
 
-# simple-rust-blockchain
-A simple blockchain written in RUST lang
